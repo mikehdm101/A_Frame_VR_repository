@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Sala de recreativasl</title>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+</head>
+<body>
+<a-assets>
+    <a-asset-item id="jurassic_world_gyrosphere" src="./assets/jurassic_world_gyrosphere.glb"></a-asset-item>
+    <a-asset-item id="imperial_atat" src="./assets/imperial_atat.glb"></a-asset-item>
+    <a-asset-item id="bb8" src="./assets/bb8_animated/scene.gltf"></a-asset-item>
+</a-assets>
+<a-scene>
+    <a-sky color="#ECECEC"></a-sky>
+    <a-image position="0 1.5 -4.99" src="./img/monalisa.jpeg" width="1.5" height="2"></a-image>
+    <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" material="src: ./img/wood_floor.jpg; repeat: 3 3"></a-plane>
+    <a-box position="0 1.5 -5.15" width="10" height="3" depth="0.3" material="src: ./img/painted_wall.jpg; repeat: 5 2"></a-box>
+    <a-box position="-5.15 1.5 0" rotation="0 90 0" width="10" height="3" depth="0.3" material="src: ./img/painted_wall.jpg; repeat: 5 2"></a-box>
+    <a-box position="5.15 1.5 0" rotation="0 -90 0" width="10" height="3" depth="0.3" material="src: ./img/painted_wall.jpg; repeat: 5 2"></a-box>
+    <a-box position="0 1.5 5.15"  width="10" height="3" depth="0.3" material="src: ./img/painted_wall.jpg; repeat: 5 2"></a-box>
+    
+    <a-entity position="-3 -0.01 -2" rotation="0 45 0" scale="1 1 1" gltf-model="#jurassic_world_gyrosphere"></a-entity>
+    <a-entity position="40 -10 -58.3"  rotation="-10 0 0" scale="1 1 1" gltf-model="#imperial_atat"></a-entity>
+    <a-entity position="3 0 -3" rotation="0 -45 0" scale="1 1 1" gltf-model="#bb8"></a-entity>
+
+</a-scene>
+
+</body>
+</html>
