@@ -20,12 +20,10 @@
         <!-- Luces -->
         
         <a-light type="point"
-             intensity="1.6"
-             distance="8"
-             color="#ffffff"
-             position="0 2.35 0.2"
-             >
-             
+              intensity="1.6"
+              distance="8"
+              color="#ffffff"
+              position="0 2.35 0.2">
     </a-light>
     
 
@@ -33,7 +31,7 @@
         <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" material="src: ./assets/textures/wood_floor.jpg;repeat:3 3" static-body></a-plane>
 
         <!-- Techo -->
-        <a-plane position="0 2.5 0" rotation="90 0 0" width="10" height="10" material="src: ./assets/textures/wood_floor.jpg;repeat:3 3"  static-body></a-plane>
+        <a-plane position="0 2.5 0" rotation="90 0 0" width="10" height="10" material="shader:flat;src: ./assets/textures/wood_floor.jpg;repeat:3 3;"  static-body></a-plane>
 
         <!-- Paredes (2.5 m altura) -->
         <a-box position="0 1.25 -5" width="10" height="2.5" depth="0.1" color="#ccc" static-body></a-box>
