@@ -1,0 +1,11 @@
+Model Information:
+* title:	Arcade The Real Ghostbusters
+* source:	https://sketchfab.com/3d-models/arcade-the-real-ghostbusters-0f973fe6daa14087b352366b58321602
+* author:	Daniele Cocchi (https://sketchfab.com/Cocchi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Arcade The Real Ghostbusters" (https://sketchfab.com/3d-models/arcade-the-real-ghostbusters-0f973fe6daa14087b352366b58321602) by Daniele Cocchi (https://sketchfab.com/Cocchi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
