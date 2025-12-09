@@ -11,16 +11,27 @@
 <body>
   <a-scene physics="gravity: -9.8">
 
+    <!-- Player -->
+    <a-entity id="rig" dynamic-body movement-controls="fly: false; speed: 0.15" position="0 1.6 0">
+      <a-entity camera look-controls="pointerLockEnabled: false"></a-entity>
+    </a-entity>
+    <a-entity hand-controls="hand: left; handModelStyle: low-poly;"></a-entity>
+    <a-entity hand-controls="hand: right; handModelStyle: low-poly;"></a-entity>
+
     <!-- Cargar modelos -->
     <a-assets>
       <a-asset-item id="fluorescent" src="./assets/models/weathered_fluorescent_light_-_4096px2.glb"></a-asset-item>
-      <a-assets-item id="recreativa1" src="./assets/models/6jynqxn2i2-11/skydiver.3ds"></a-assets-item>
+      <a-assets-item id="recreativa1" src="./assets/models/arcade_retro/scene.gltf"></a-assets-item>
+      <a-assets-item id="recreativa2" src="./assets/models/arcade_the_real_ghostbusters/scene.gltf"></a-assets-item>
+      <a-assets-item id="recreativa3" src="./assets/models/claw_machine/scene.gltf"></a-assets-item>
+      <a-assets-item id="recreativa4" src="./assets/models/dance_dance_revolution/scene.gltf"></a-assets-item>
+      <a-assets-item id="recreativa5" src="./assets/models/pacman_arcade__animation/scene.gltf"></a-assets-item>
     </a-assets>
 
     <!-- Luces -->
-    <a-light type="point" intensity="0.1" distance="6" color="#ffffff" position="2 2.5 0">
+    <a-light type="point" intensity="0.5" distance="6" color="#ffffff" position="2 2.5 0">
     </a-light>
-    <a-light type="point" intensity="0.1" distance="6" color="#ffffff" position="-2 2.5 0">
+    <a-light type="point" intensity="0.5" distance="6" color="#ffffff" position="-2 2.5 0">
     </a-light>
 
 
@@ -32,15 +43,19 @@
     <a-plane position="0 2.5 0" rotation="90 0 0" width="10" height="10"
       material="shader:flat;src: ./assets/textures/Textura techo.jpg;repeat:10 10;color: #222" static-body></a-plane>
 
-    <!-- Paredes (2.5 m altura) -->
-    <a-box position="0 1.25 -5" material="src: ./assets/textures/painted_wall.jpg;repeat:7 2; color: #505" width="10" height="2.5" depth="0.1" color="#ccc" static-body></a-box>
-    <a-box position="0 1.25 5" material="src: ./assets/textures/painted_wall.jpg;repeat:7 2; color: #505" width="10" height="2.5" depth="0.1" color="#ccc" static-body></a-box>
-    <a-box position="5 1.25 0" material="src: ./assets/textures/painted_wall.jpg;repeat:7 2; color: #505" width="0.1" height="2.5" depth="10" color="#ccc" static-body></a-box>
-    <a-box position="-5 1.25 0" material="src: ./assets/textures/painted_wall.jpg;repeat:7 2; color: #505" width="0.1" height="2.5" depth="10" color="#ccc" static-body></a-box>
+    <!-- Paredes -->
+    <a-box static-body position="0 1.25 -5" material="src: ./assets/textures/painted_wall.jpg;repeat:3 1; color: #505" width="10" height="2.5" depth="0.1" color="#ccc" static-body></a-box>
+    <a-box static-body width="10" height="2.5" depth="0.1" position="0 1.25 -5" visible="false"></a-box>
+    <a-box static-body position="0 1.25 5" material="src: ./assets/textures/painted_wall.jpg;repeat:3 1; color: #505" width="10" height="2.5" depth="0.1" color="#ccc" static-body></a-box>
+    <a-box static-body position="5 1.25 0" material="src: ./assets/textures/painted_wall.jpg;repeat:3 1; color: #505" width="0.1" height="2.5" depth="10" color="#ccc" static-body></a-box>
+    <a-box static-body position="-5 1.25 0" material="src: ./assets/textures/painted_wall.jpg;repeat:3 1; color: #505" width="0.1" height="2.5" depth="10" color="#ccc" static-body></a-box>
 
     <!-- Recreativas -->
-    <a-entity  position="0 1.25 -5" scale="1 1 1" gltf-model="#recreativa1"></a-entity>
-    
+    <a-entity  position="-2 0 -4.5" scale="15 15 15" gltf-model="#recreativa1"></a-entity>
+    <a-entity  position="-0.52 0 -4.5" scale="0.07 0.07 0.07" rotation="0 180 0" gltf-model="#recreativa2"></a-entity>
+    <a-entity  position="-2.7 0 -4.5" scale="1 1 1" gltf-model="#recreativa3"></a-entity>
+    <a-entity  position="-4 0 -3.7" scale="0.35 0.35 0.35" gltf-model="#recreativa4"></a-entity>
+    <!-- <a-entity  position="0 0 0" scale="1 1 1" gltf-modesl="#recreativa5"></a-entity> -->
 
     <!-- Jugador -->
     <a-entity id="player" position="0 0 0" movement-controls kinematic-body="radius: 0.3; height: 1.6">
