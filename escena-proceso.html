@@ -17,6 +17,11 @@
     </a-entity>
     <a-entity hand-controls="hand: left; handModelStyle: low-poly;"></a-entity>
     <a-entity hand-controls="hand: right; handModelStyle: low-poly;"></a-entity>
+    <a-entity laser-controls="hand: left"></a-entity>
+    <a-entity laser-controls="hand: right"></a-entity>
+
+    <!-- Botones -->
+    <a-box id="boton" position="0 1.5 -1" depth="0.1" height="0.2" width="0.5" color="#4CAF50" class="interactable"></a-box>
 
     <!-- Cargar modelos -->
     <a-assets>
@@ -47,8 +52,6 @@
 
 <!-- Escena -->
     <a-box static-body position="0 1.25 4"  rotation="0 180 0" material="src: ./assets/textures/first-scenary.PNG;repeat:1 1 ;color: rgba(255, 255, 255, 0); transparent: true;"  width="10" height="2.5" depth="0.1"  static-body ></a-box>
-   
-
 
     <!-- Cielo -->
     <a-sky src="./assets/360/360_F_461418106_G1428F5omNT1lWSECBWVMN6pNzdnNJAg.jpg"></a-sky>
