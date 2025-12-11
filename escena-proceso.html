@@ -21,7 +21,7 @@
     <!-- Cargar modelos -->
     <a-assets>
       <a-asset-item id="fluorescent" src="./assets/models/weathered_fluorescent_light_-_4096px2.glb"></a-asset-item>
-      <a-asset-item id="cristaldoor" src="./assets/models/doors_stylish_glass_door.glb"></a-asset-item>
+      <a-asset-item id="cristaldoor" src="./assets/models/glass_door_247/scene.gltf"></a-asset-item>
       <a-assets-item id="recreativa1" src="./assets/models/arcade_retro/scene.gltf"></a-assets-item>
       <a-assets-item id="recreativa2" src="./assets/models/arcade_the_real_ghostbusters/scene.gltf"></a-assets-item>
       <a-assets-item id="recreativa3" src="./assets/models/claw_machine/scene.gltf"></a-assets-item>
@@ -49,15 +49,16 @@
 
     <!-- Paredes -->
     <a-box static-body position="0 1.25 -5" material="src: ./assets/textures/painted_wall.jpg;repeat:3 1; color: #505" width="10" height="2.5" depth="0.1" color="#ccc" static-body></a-box>
-    <a-box static-body width="10" height="2.5" depth="0.1" position="0 1.25 -5" visible="false"></a-box>
     <a-box static-body position="0 1.25 5" material="src: ./assets/textures/painted_wall.jpg;repeat:3 1; color: #505" width="10" height="2.5" depth="0.1" color="#ccc" static-body></a-box>
+    <a-box static-body position="5 1.25 0" width="0.1" height="2" depth="2" static-body visible="false"></a-box>
     <a-box static-body position="5 1.25 3" material="src: ./assets/textures/painted_wall.jpg;repeat:1 1; color: #505" width="0.1" height="2.5" depth="4" color="#ccc" static-body></a-box>
     <a-box static-body position="5 2.5 0" material="src: ./assets/textures/painted_wall.jpg;repeat:1 1; color: #505" width="0.1" height="0.4" depth="4" color="#ccc" static-body></a-box>
     <a-box static-body position="5 1.25 -3" material="src: ./assets/textures/painted_wall.jpg;repeat:1 1; color: #505" width="0.1" height="2.5" depth="4" color="#ccc" static-body></a-box>
     <a-box static-body position="-5 1.25 0" material="src: ./assets/textures/painted_wall.jpg;repeat:3 1; color: #505" width="0.1" height="2.5" depth="10" color="#ccc" static-body></a-box>
 
     <!-- Recreativas -->
-     <a-entity  position="5 0 1" scale="1 1 1" gltf-model="#cristaldoor"></a-entity>
+    <a-entity  position="5 0 0.5" scale="0.012 0.0113 0.01" rotation="0 -90 0" gltf-model="#cristaldoor"></a-entity>
+    <a-entity  position="5 0 -0.5" scale="0.012 0.0113 0.01" rotation="0 90 0" gltf-model="#cristaldoor"></a-entity>
     <a-entity  position="-2 0 -4.5" scale="15 15 15" gltf-model="#recreativa1"></a-entity>
     <a-entity  position="-0.52 0 -4.5" scale="0.07 0.07 0.07" rotation="0 180 0" gltf-model="#recreativa2"></a-entity>
     <a-entity  position="-2.7 0 -4.5" scale="1 1 1" gltf-model="#recreativa3"></a-entity>
