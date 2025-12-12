@@ -59,6 +59,10 @@
       <a-assets-item id="recreativa4" src="./assets/models/dance_dance_revolution/scene.gltf"></a-assets-item>
       <a-assets-item id="recreativa5" src="./assets/models/pacman_arcade__animation/scene.gltf"></a-assets-item>
       <a-assets-item id="bb8" src="./assets/models/bb8_animated.glb"></a-assets-item>
+      <img id="poseQuieto" src="./assets/textures/Posequiet.png">
+      <img id="posePatada" src="./assets/textures/posepegando.png">
+      <img id="posequieto2" src="./assets/textures/posequieto2.png">
+      <audio id="sonidoPatada" src="./assets/sounds/:poner patada:"></audio>
     </a-assets>
 
     <!-- Luces -->
@@ -125,12 +129,7 @@
       material="src: #posequieto2; repeat:1 1; color: rgba(255, 255, 255, 0.3); transparent: true; " width="0.4"
       height="0.5" scale="-1 1 1" static-body></a-plane>
 
-    <a-assets>
-      <img id="poseQuieto" src="./assets/textures/Posequiet.png">
-      <img id="posePatada" src="./assets/textures/posepegando.png">
-      <img id="posequieto2" src="./assets/textures/posequieto2.png">
-      <audio id="sonidoPatada" src="./assets/sounds/:poner patada:"></audio>
-    </a-assets>
+    
 
     <!-- Lámpara fluorescente -->
     <a-entity position="2 2.50 0" rotation="0 90 0" scale="1 1 1" gltf-model="#fluorescent" fluor-lighting
