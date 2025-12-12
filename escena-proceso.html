@@ -6,25 +6,25 @@
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system@4.0.1/dist/aframe-physics-system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
- <script>
-AFRAME.registerComponent("boton-interactivo", {
-  init: function () {
-    this.el.addEventListener("click", () => {
-      const muñeco = document.querySelector("#muñeco");
+  <script>
+    AFRAME.registerComponent("boton-interactivo", {
+      init: function () {
+        this.el.addEventListener("click", () => {
+          const muñeco = document.querySelector("#muñeco");
 
-      // Cambiar a la pose de patada
-      muñeco.setAttribute("material", "src: #posePatada; transparent: true");
-      console.log("Patada activada");
+          // Cambiar a la pose de patada
+          muñeco.setAttribute("material", "src: #posePatada; transparent: true");
+          console.log("Patada activada");
 
-      // Después de 1 segundo, volver a la pose normal
-      setTimeout(() => {
-        muñeco.setAttribute("material", "src: #poseQuieto; transparent: true");
-        console.log("Vuelve a pose quieta");
-      }, 1000);
+          // Después de 1 segundo, volver a la pose normal
+          setTimeout(() => {
+            muñeco.setAttribute("material", "src: #poseQuieto; transparent: true");
+            console.log("Vuelve a pose quieta");
+          }, 1000);
+        });
+      }
     });
-  }
-});
-</script>
+  </script>
   <title>Escena proceso</title>
 </head>
 
@@ -44,7 +44,8 @@ AFRAME.registerComponent("boton-interactivo", {
     <a-entity hand-tracking-controls="hand: right" sphere-collider="objects: .interactable"></a-entity>
 
     <!-- Botones -->
-    <a-sphere boton-interactivo id="boton" position="0 1.3 2" radius="0.1" color="#ff4145" class="interactuable"></a-sphere>
+    <a-sphere boton-interactivo id="boton" position="0 1.3 2" radius="0.1" color="#ff4145"
+      class="interactuable"></a-sphere>
 
     <!-- Cargar modelos -->
     <a-assets>
@@ -115,14 +116,15 @@ AFRAME.registerComponent("boton-interactivo", {
       material="src: ./assets/textures/Posequiet.png; repeat:1 1; color: rgba(255, 255, 255, 0.3); transparent: true; "
       width="0.4" height="0.5" static-body></a-plane>
 
-       <a-plane  static-body position="0 0.5 2" rotation="0 180 0"
-      material="src: ./assets/textures/posequieto2; repeat:1 1; color: rgba(255, 255, 255, 0.3); transparent: true; "
-      width="0.4" height="0.5" static-body></a-plane> 
+    <a-plane static-body position="-1 0.5 3.90" rotation="0 180 0"
+      material="src: #posequieto2; repeat:1 1; color: rgba(255, 255, 255, 0.3); transparent: true; "
+      width="0.4" height="0.5" scale="-1 1 1" static-body></a-plane>
 
-      <a-assets>
-    <img id="poseQuieto" src="./assets/textures/Posequiet.png">
-    <img id="posePatada" src="./assets/textures/posepegando.png">
-</a-assets>
+    <a-assets>
+      <img id="poseQuieto" src="./assets/textures/Posequiet.png">
+      <img id="posePatada" src="./assets/textures/posepegando.png">
+      <img id="posequieto2" src="./assets/textures/posequieto2.png">
+    </a-assets>
 
     <!-- Lámpara fluorescente -->
     <a-entity position="2 2.50 0" rotation="0 90 0" scale="1 1 1" gltf-model="#fluorescent" fluor-lighting
