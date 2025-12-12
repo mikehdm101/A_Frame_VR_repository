@@ -8,22 +8,23 @@
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   <script>
     AFRAME.registerComponent("boton-interactivo", {
-      init: function () {
-        this.el.addEventListener("click", () => {
-          const muñeco = document.querySelector("#muñeco");
-
-          // Cambiar a la pose de patada
-          muñeco.setAttribute("material", "src: #posePatada; transparent: true");
-          console.log("Patada activada");
-
-          // Después de 1 segundo, volver a la pose normal
-          setTimeout(() => {
-            muñeco.setAttribute("material", "src: #poseQuieto; transparent: true");
-            console.log("Vuelve a pose quieta");
-          }, 1000);
-        });
-      }
+  init: function () {
+    this.el.addEventListener("click", () => {
+      const muñeco = document.querySelector("#muñeco");
+      
+      // Cambiar pose, por ejemplo
+      muñeco.setAttribute("material", "src: #posePatada; transparent: true");
+      
+      // Reproducir sonido
+      muñeco.components.sound.playSound();
+      
+      // Volver a pose quieta después de 1 segundo
+      setTimeout(() => {
+        muñeco.setAttribute("material", "src: #poseQuieto; transparent: true");
+      }, 1000);
     });
+  }
+});
   </script>
   <title>Escena proceso</title>
 </head>
@@ -112,9 +113,11 @@
     </a-entity>
 
     <!--Muñeco-->
-    <a-plane id="muñeco" static-body position="0 0.5 3.90" rotation="0 180 0"
+    <a-plane id="muñeco" sound="src: #sonidoPatada; autoplay: false" static-body position="0 0.5 3.90" rotation="0 180 0"
       material="src: ./assets/textures/Posequiet.png; repeat:1 1; color: rgba(255, 255, 255, 0.3); transparent: true; "
       width="0.4" height="0.5" static-body></a-plane>
+
+
 
     <a-plane static-body position="-1 0.5 3.90" rotation="0 180 0"
       material="src: #posequieto2; repeat:1 1; color: rgba(255, 255, 255, 0.3); transparent: true; "
@@ -124,6 +127,7 @@
       <img id="poseQuieto" src="./assets/textures/Posequiet.png">
       <img id="posePatada" src="./assets/textures/posepegando.png">
       <img id="posequieto2" src="./assets/textures/posequieto2.png">
+      <audio id="sonidoPatada" src="./assets/sounds/:poner patada:"></audio>
     </a-assets>
 
     <!-- Lámpara fluorescente -->
