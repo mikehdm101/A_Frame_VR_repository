@@ -1,7 +1,7 @@
 # [Título del Tour] - [Sector o Idea Creativa]
 > **Equipo:** [Nombres]
 > **Opción:** [A) Sector / B) Creativa]
-> **URL:** [https://equipo.github.io/proyecto-vr](...)
+> **URL:** [](https://mikehdm101.github.io/A_Frame_VR_repository/)](...)
 ---
 ## 1. Tecnología: A-Frame
 | Característica | Descripción |
@@ -46,3 +46,4 @@ eficiencia** |
 3. Interactúa con objetos
 4. VR: Oculus/Quest
 ---
+
