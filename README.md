@@ -1,5 +1,5 @@
 # [Título del Tour] - [Sector o Idea Creativa]
-> **Equipo:** [Nombres]
+> **Equipo:** Miguel Hurtado de Mendoza Sanchez
 > **Opción:** [A) Sector / B) Creativa]
 > **URL:** []()]([...](https://mikehdm101.github.io/A_Frame_VR_repository/))
 ---
