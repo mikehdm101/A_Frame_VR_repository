@@ -36,9 +36,9 @@ eficiencia** |
 - Impacto: [formación, viajes evitados]
 ---
 ## 5. Capturas
-![360°](screenshots/360.jpg)
-![Proceso](screenshots/proceso.jpg)
-![Producto](screenshots/producto.jpg)
+![360°](textures/360.jpg)
+![Proceso](textures/proceso.jpg)
+![Producto](textures/producto.jpg)
 ---
 ## 6. Uso
 1. Abre en GitHub Pages
