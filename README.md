@@ -1,7 +1,7 @@
-# [Título del Tour] - [Sector o Idea Creativa]
+# [Arcade] - [Idea Creativa]
 > **Equipo:** Miguel Hurtado de Mendoza Sanchez
-> **Opción:** [A) Sector / B) Creativa]
-> **URL:** []()]([...](https://mikehdm101.github.io/A_Frame_VR_repository/))
+> **Opción:** [B) Creativa]
+> **URL:** []()([...](https://mikehdm101.github.io/A_Frame_VR_repository/))
 ---
 ## 1. Tecnología: A-Frame
 | Característica | Descripción |
