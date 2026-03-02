@@ -45,9 +45,9 @@
 ---
 
 ## 5. Capturas
-![360°](textures/360.jpg)
-![Proceso](textures/proceso.jpg)
-![Producto](textures/producto.jpg)
+![360°](assets/textures/360.jpg)
+![Proceso](assets/textures/proceso.jpg)
+![Producto](assets/textures/producto.jpg)
 
 ---
 
